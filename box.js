@@ -4,7 +4,7 @@
 'use strict';
 const $setuprc = (require('setuprc')).base;
 
-const box = function(settings){
+const boxBase = function(settings){
     this.start = function(){
     };
     this.stop =  function(){
@@ -24,7 +24,7 @@ const box = function(settings){
             'type'    : 'string',
             'default' : ''
         },
-        'createdA':{
+        'createdAt':{
             'type'    : 'integer',
             'default' : (Date.now()+75600000)
         },
@@ -44,4 +44,4 @@ const box = function(settings){
         _setup.setup(settings);
 };
 
-
+export.base = boxBase;
