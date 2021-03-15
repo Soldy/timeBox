@@ -26,7 +26,7 @@ const boxBase = function(settings){
         },
         'createdAt':{
             'type'    : 'integer',
-            'default' : (Date.now()+75600000)
+            'default' : (Date.now())
         },
         'user':{
             'type'    : 'string',
