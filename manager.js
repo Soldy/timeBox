@@ -18,7 +18,7 @@ const managerBase = function (){
     this.newUser = function(){
         return _newUser();
     }
-    this.user = function
+    this.user = function (){
         return _tasks[id];
     }
     this.newProject = function(){
