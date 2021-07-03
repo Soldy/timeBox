@@ -1,4 +1,3 @@
-
 /*
  *  @Soldy\temprc\2021.05.15\GPL3
  */
@@ -6,10 +5,8 @@
 const $setuprc = (require('setuprc')).base;
 const $rightsrc = (require('rightsrc')).base;
 
-
-
 const reportBase = function(settings){
-    this.newBox = function(){
+    this.newReport = function(){
 
     }
     const _setup =  $setuprc({
@@ -17,16 +14,20 @@ const reportBase = function(settings){
            'type'    : 'string',
            'defautl' : ''
         },
-        'stamp':{
-            'type'   : 'integer',
-           'defautl' : Date.now()
+        'createdAt':{
+            'type'    : 'integer',
+            'default' : (Date.now())
         },
         'user':{
            'type'    : 'string',
            'defautl' : ''
         },
+        'type':{
+           'type'    : 'string',
+           'defautl' : ''
+        },
     });
-    let _boxes = [];
+    let _responses = [];
     if ( typeof settings !== 'undefined' )
         _setup.setup(settings);
 }
